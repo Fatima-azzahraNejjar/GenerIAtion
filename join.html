@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rejoindre GénérIAtion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  // Intersection observer pour l'effet fade-in
+  (function(){
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.fadein').forEach(el => obs.observe(el));
+  })();
+
+  // Ajustement léger de la taille de base sur écrans très larges (optionnel)
+  (function(){
+    function adaptFont() {
+      const w = window.innerWidth;
+      if (w >= 2000) {
+        document.documentElement.style.fontSize = '20px';
+      } else if (w >= 1600) {
+        document.documentElement.style.fontSize = '18px';
+      } else {
+        document.documentElement.style.fontSize = '';
+      }
+    }
+    adaptFont();
+    window.addEventListener('resize', adaptFont);
+  })();
+</script>
+
+<body>
+  <header>
+    <div class="logo">GénérIAtion</div>
+    <nav>
+      <a href="accueil.html">Accueil</a>
+      <a href="debats.html">Débats</a>
+      <a href="talks.html">IA Talks</a>
+      <a href="initiation.html">Initiations</a>
+      <a href="join.html">Rejoindre</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Rejoins l’aventure 🎉</h1>
+    <p>Remplis ce formulaire pour nous dire tes motivations, tes idées et les rôles que tu aimerais prendre.</p>
+
+   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfUvo_XaWrQ556qeg6elF-8l3FHMi9SGk8RChkrILBVWMFImg/viewform?embedded=true"
+      width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Chargement…
+    </iframe>
+  </div>
+
+  <footer>
+    <div>© 2025 GénérIAtion — Club IA du LFILM</div>
+    <div class="team">
+      <strong>Équipe :</strong><br>
+      Amine Hammouda — créateur, idée 💡<br>
+      Fatima-Azzahra Nejjar — co-créatrice, site & Google Forms 🌐
+    </div>
+  </footer>
+</body>
+</html>
