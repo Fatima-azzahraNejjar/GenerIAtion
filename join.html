@@ -6,37 +6,12 @@
   <title>Rejoindre GénérIAtion</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  // Intersection observer pour l'effet fade-in
-  (function(){
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, {threshold: 0.12});
-    document.querySelectorAll('.fadein').forEach(el => obs.observe(el));
-  })();
-
-  // Ajustement léger de la taille de base sur écrans très larges (optionnel)
-  (function(){
-    function adaptFont() {
-      const w = window.innerWidth;
-      if (w >= 2000) {
-        document.documentElement.style.fontSize = '20px';
-      } else if (w >= 1600) {
-        document.documentElement.style.fontSize = '18px';
-      } else {
-        document.documentElement.style.fontSize = '';
-      }
-    }
-    adaptFont();
-    window.addEventListener('resize', adaptFont);
-  })();
-</script>
 
 <body>
   <header>
     <div class="logo">GénérIAtion</div>
+        <!-- Bouton burger -->
+<button class="burger" aria-label="Menu">☰</button>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="debats.html">Débats</a>
@@ -63,6 +38,34 @@
       Fatima-Azzahra Nejjar — co-créatrice, site & Google Forms 🌐
     </div>
   </footer>
+  <script>
+  // Intersection observer pour l'effet fade-in
+  (function(){
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.fadein').forEach(el => obs.observe(el));
+  })();
+
+  // Ajustement léger de la taille de base sur écrans très larges (optionnel)
+  (function(){
+    function adaptFont() {
+      const w = window.innerWidth;
+      if (w >= 2000) {
+        document.documentElement.style.fontSize = '20px';
+      } else if (w >= 1600) {
+        document.documentElement.style.fontSize = '18px';
+      } else {
+        document.documentElement.style.fontSize = '';
+      }
+    }
+    adaptFont();
+    window.addEventListener('resize', adaptFont);
+  })();
+</script>
 </body>
 </html>
+
 
