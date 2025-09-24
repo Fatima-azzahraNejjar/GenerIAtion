@@ -6,6 +6,15 @@
   <title>GénérIAtion — Accueil</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('nav');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
 <body>
   <header>
     <div class="logo">GénérIAtion</div>
@@ -41,5 +50,6 @@
   </footer>
 </body>
 </html>
+
 
 
