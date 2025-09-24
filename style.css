@@ -203,7 +203,7 @@ footer .team {margin-top:12px;color:#cfd8e3;font-size:13px}
     position: absolute;
     top: 70px;
     right: 20px;
-    background: linear-gradient(90deg,var(--accent),var(--accent2));
+    background: rgba(0,0,0,0.2)
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -218,4 +218,5 @@ footer .team {margin-top:12px;color:#cfd8e3;font-size:13px}
     transform: translateY(0);
   }
 }
+
 
